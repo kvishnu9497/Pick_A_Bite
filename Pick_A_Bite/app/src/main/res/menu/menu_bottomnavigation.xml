@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        app:showAsAction="always|withText"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/order"
+        android:icon="@drawable/ic_restaurant_menu"
+        android:title="Orders"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/favourites"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/favourites"/>
+    <item
+        android:id="@+id/more"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more"/>
+</menu>

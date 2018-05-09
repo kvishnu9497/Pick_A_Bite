@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5"
+    style="@style/AppTheme"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="10dip"
+            card_view:centered="true"
+            card_view:fillColor="@color/white"
+            card_view:pageColor="@android:color/transparent"
+            card_view:snap="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cakes"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:id="@+id/cakes1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/d" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ededed"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="font"
+                    android:text="@string/cakes"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/foods"
+            android:layout_width="170dp"
+            android:layout_height="190dp"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            card_view:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:id="@+id/foods1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:adjustViewBounds="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/food" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ededed"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/foods"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</FrameLayout>
