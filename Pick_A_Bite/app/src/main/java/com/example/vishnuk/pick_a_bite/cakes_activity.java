@@ -1,13 +1,14 @@
-package com.example.vishnuk.myapplication;
+package com.example.vishnuk.pick_a_bite;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class cakes_activity extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class cakes_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cakes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        EditText editText = (EditText) findViewById(R.id.editText) ;
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

@@ -28,7 +28,7 @@
             android:gravity="bottom"
             android:padding="10dip"
             card_view:centered="true"
-            card_view:fillColor="@color/white"
+            card_view:fillColor="@android:color/white"
             card_view:pageColor="@android:color/transparent"
             card_view:snap="true" />
     </RelativeLayout>

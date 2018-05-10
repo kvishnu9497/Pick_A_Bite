@@ -23,11 +23,9 @@
             android:hint="@string/search_your_favourites"
             android:textSize="16sp"
             android:layout_marginEnd="20dp"
-            android:background="@drawable/custom_edittext_bottom_line"
+            android:background="@drawable/custom_edittext"
             android:textColorHint="#78909C"
-            app:backgroundTint="@color/blue"
-            android:paddingBottom="10dp"
-            android:textCursorDrawable="@color/blue"/>
+            android:paddingBottom="10dp"/>
 
     </android.support.v7.widget.Toolbar>
 

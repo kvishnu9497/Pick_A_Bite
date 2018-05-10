@@ -1,4 +1,4 @@
-package com.example.vishnuk.myapplication;
+package com.example.vishnuk.pick_a_bite;
 
 import android.app.Activity;
 import android.graphics.Color;

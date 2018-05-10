@@ -1,35 +1,23 @@
-package com.example.vishnuk.myapplication;
+package com.example.vishnuk.pick_a_bite;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.vishnuk.myapplication.NON_VEG_Fragment;
-import com.example.vishnuk.myapplication.R;
-import com.example.vishnuk.myapplication.VEG_Fragment;
 
 
 public class TabbedActivity extends AppCompatActivity {
@@ -73,7 +61,7 @@ public class TabbedActivity extends AppCompatActivity {
         if (root instanceof LinearLayout) {
             ((LinearLayout) root).setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
             GradientDrawable drawable = new GradientDrawable();
-            drawable.setColor(getResources().getColor(R.color.white));
+            drawable.setColor(getResources().getColor(android.R.color.white));
             drawable.setSize(2, 1);
             ((LinearLayout) root).setDividerPadding(10);
             ((LinearLayout) root).setDividerDrawable(drawable);

@@ -1,4 +1,4 @@
-package com.example.vishnuk.myapplication;
+package com.example.vishnuk.pick_a_bite;
 
 import android.content.Context;
 import android.os.Parcelable;
@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import java.util.ArrayList;
 
 /**
