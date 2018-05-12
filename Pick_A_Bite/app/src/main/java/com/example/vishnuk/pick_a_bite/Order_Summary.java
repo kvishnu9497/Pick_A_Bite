@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.support.v7.widget.CardView;
+
+import static com.example.vishnuk.pick_a_bite.TabbedActivity.mNotificationCounter;
 
 public class Order_Summary extends AppCompatActivity {
 
@@ -15,6 +19,24 @@ public class Order_Summary extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_tabbed, menu);
+        // Create a condition (hide it if the count < 0)
+        if (mNotificationCounter >= 0) {
+            BadgeCounters.update(this,
+                    menu.findItem(R.id.cart_badge_in_tabview),
+                    R.drawable.ic_shopping_cart_36dp,
+                    BadgeCounters.BadgeColor.BLUE,
+                    mNotificationCounter);
+        } else {
+            BadgeCounters.hide(menu.findItem(R.id.cart_badge_in_tabview));
+        }
+
+        return true;
     }
 
     @Override

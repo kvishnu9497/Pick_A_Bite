@@ -18,8 +18,7 @@
             android:background="@android:color/white"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             android:theme="@style/toolbar_theme"
-            app:logo="@drawable/pab_logo_org1"
-            />
+            app:logo="@drawable/pab_logo_org1" />
 
     </android.support.design.widget.AppBarLayout>
 

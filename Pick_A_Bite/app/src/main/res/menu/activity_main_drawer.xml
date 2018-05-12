@@ -21,13 +21,13 @@
             android:title="@null" />
 
         <item
-            android:id="@+id/about_us"
-            app:actionLayout="@layout/about_us"
+            android:id="@+id/share"
+            app:actionLayout="@layout/share"
             android:title="@null" />
 
         <item
-            android:id="@+id/share"
-            app:actionLayout="@layout/share"
+            android:id="@+id/about_us"
+            app:actionLayout="@layout/about_us"
             android:title="@null" />
 
         <item
@@ -40,6 +40,4 @@
             app:actionLayout="@layout/exit"
             android:title="@null" />
     </group>
-
-
 </menu>
