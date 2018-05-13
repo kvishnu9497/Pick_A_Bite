@@ -164,7 +164,7 @@ public class TabbedActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_veg, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_arabic, container, false);
             return rootView;
         }
     }
@@ -185,10 +185,34 @@ public class TabbedActivity extends AppCompatActivity {
             Fragment fragment=null;
             switch (position) {
                 case 0:
-                    fragment = new VEG_Fragment();
+                    fragment = new Arabic();
                     break;
                 case 1:
-                    fragment = new NON_VEG_Fragment();
+                    fragment = new Kababs();
+                    break;
+                case 2:
+                    fragment = new Rice();
+                    break;
+                case 3:
+                    fragment = new Veg_Gravy();
+                    break;
+                case 4:
+                    fragment = new Non_veg_gravy();
+                    break;
+                case 5:
+                    fragment = new Starters();
+                    break;
+                case 6:
+                    fragment = new Salads();
+                    break;
+                case 7:
+                    fragment = new Non_veg_appetizers();
+                    break;
+                case 8:
+                    fragment = new Chinese_delights();
+                    break;
+                case 9:
+                    fragment = new Rice_n_noodles();
                     break;
                 default:
                     return null;
@@ -198,8 +222,8 @@ public class TabbedActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 2 total pages.
-            return 2;
+            // Show 10 total pages.
+            return 10;
         }
     }
 }

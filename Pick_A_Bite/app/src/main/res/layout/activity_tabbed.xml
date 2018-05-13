@@ -47,7 +47,7 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="fixed"
+            app:tabMode="scrollable"
             app:tabIndicatorColor="#0064A0"
             app:tabIndicatorHeight="4dp"
             app:tabTextColor="@android:color/white"
@@ -55,17 +55,64 @@
             app:tabBackground="@color/dark_orange">
 
             <android.support.design.widget.TabItem
-                android:id="@+id/tabItem"
+                android:id="@+id/tabItem1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VEG FOOD" />
+                android:text="@string/arabic" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NON-VEG FOOD" />
+                android:text="@string/kababs_grills" />
 
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rice" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/veg_gravy" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_veg_gravy" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/starters_soups" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/salads" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_veg_appetizers" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chinese_delights_veg" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rice_n_noodles" />
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 

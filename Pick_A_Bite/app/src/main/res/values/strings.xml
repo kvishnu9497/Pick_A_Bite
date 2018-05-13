@@ -26,4 +26,14 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="search_your_favourites">Search your favourites</string>
     <string name="title_activity_navigation_drawer">navigation_drawer</string>
+    <string name="kababs_grills"> KABABS &amp; GRILLS </string>
+    <string name="chinese_delights_veg"> CHINESE DELIGHTS VEG </string>
+    <string name="rice_n_noodles"> RICE \'N\' NOODLES </string>
+    <string name="salads"> SALADS </string>
+    <string name="non_veg_appetizers"> NON-VEG APPETIZERS </string>
+    <string name="starters_soups"> STARTERS SOUPS </string>
+    <string name="non_veg_gravy"> NON-VEG GRAVY </string>
+    <string name="veg_gravy"> VEG GRAVY </string>
+    <string name="rice"> RICE </string>
+    <string name="arabic"> ARABIC </string>
 </resources>
