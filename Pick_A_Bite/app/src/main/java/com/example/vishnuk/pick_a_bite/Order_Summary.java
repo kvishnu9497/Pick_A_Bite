@@ -1,12 +1,14 @@
 package com.example.vishnuk.pick_a_bite;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.CardView;
+import android.widget.TextView;
 
 import static com.example.vishnuk.pick_a_bite.TabbedActivity.mNotificationCounter;
 
@@ -19,6 +21,9 @@ public class Order_Summary extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        /*TextView itemname = (TextView) findViewById(R.id.itemname);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/RobotoCondensed-Regular.ttf");
+        itemname.setTypeface(typeface);*/
     }
 
     @Override
