@@ -25,9 +25,9 @@ public class HomeFragment extends Fragment {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
-    private int[] myImageList = new int[]{R.drawable.a, R.drawable.b,
-            R.drawable.c,R.drawable.d
-            ,R.drawable.a,R.drawable.b};
+    private int[] myImageList = new int[]{R.drawable.d, R.drawable.food,
+            R.drawable.c
+            ,R.drawable.cakes,R.drawable.b};
     private CardView food, cake;
     public HomeFragment() {
         // Required empty public constructor
@@ -124,7 +124,7 @@ public class HomeFragment extends Fragment {
 
         ArrayList<ImageModel> list = new ArrayList<>();
 
-        for(int i = 0; i < 6; i++){
+        for(int i = 0; i < 5; i++){
             ImageModel imageModel = new ImageModel();
             imageModel.setImage_drawable(myImageList[i]);
             list.add(imageModel);

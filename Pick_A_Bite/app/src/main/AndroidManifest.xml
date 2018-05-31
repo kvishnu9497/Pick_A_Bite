@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,10 +19,18 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".cakes_activity" />
-        <activity android:name=".Order_Summary" />
-        <activity android:name=".TabbedActivity" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
+        <activity android:name=".cakes_activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Order_Summary"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TabbedActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".about"
+            android:screenOrientation="portrait" />
+        <activity android:name=".OrderSummaryEdited"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

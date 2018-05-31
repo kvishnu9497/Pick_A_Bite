@@ -1,6 +1,8 @@
 package com.example.vishnuk.pick_a_bite;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,9 +26,10 @@ import java.util.List;
 
 import static com.example.vishnuk.pick_a_bite.TabbedActivity.mNotificationCounter;
 
-public class Order_Summary extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Order_Summary extends AppCompatActivity{
     private List<OrderSummarySample> orderAdapterList = new ArrayList<>();
     OrderSummaryAdapter orderSummaryAdapter;
+    Spinner counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class Order_Summary extends AppCompatActivity implements AdapterView.OnIt
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        counter = (Spinner)findViewById(R.id.counter);
         /*TextView itemname = (TextView) findViewById(R.id.itemname);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/RobotoCondensed-Regular.ttf");
         itemname.setTypeface(typeface);*/
@@ -48,18 +53,26 @@ public class Order_Summary extends AppCompatActivity implements AdapterView.OnIt
         orderSummaryAdapter = new OrderSummaryAdapter(orderAdapterList,this);
         recyclerView.setAdapter(orderSummaryAdapter);
         add_Order_Summary_Items();
+
+        LinearLayout edit = (LinearLayout) findViewById (R.id.edit);
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Order_Summary.this,OrderSummaryEdited.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void add_Order_Summary_Items() {
-        OrderSummarySample orderSummarySample = new OrderSummarySample("Chicken Kabab with Paneer Masala", 100);
+        OrderSummarySample orderSummarySample = new OrderSummarySample("Chicken Kabab with Paneer Masala", "₹120");
         orderAdapterList.add(orderSummarySample);
 
-        orderSummarySample = new OrderSummarySample("Chicken 65 with Arabic Fragment", 120 );
+        orderSummarySample = new OrderSummarySample("Chicken 65 with Arabic Fragment", "₹210" );
         orderAdapterList.add(orderSummarySample);
 
-        orderSummarySample = new OrderSummarySample("American Cheese Chicken Gravy", 179 );
+        orderSummarySample = new OrderSummarySample("American Cheese Chicken Gravy", "₹17500" );
         orderAdapterList.add(orderSummarySample);
-
 
         orderSummaryAdapter.notifyDataSetChanged();
     }
@@ -98,17 +111,5 @@ public class Order_Summary extends AppCompatActivity implements AdapterView.OnIt
             default:
                 return super.onOptionsItemSelected(item);
         }
-
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this, "CardView clicked event ", Toast.LENGTH_LONG).show();
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }

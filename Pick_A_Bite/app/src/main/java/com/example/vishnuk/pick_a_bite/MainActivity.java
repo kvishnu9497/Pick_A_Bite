@@ -209,16 +209,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-            Toast.makeText(this,"Home", Toast.LENGTH_LONG).show();
+
         } else if (id == R.id.profile) {
 
         } else if (id == R.id.contact_us) {
 
         } else if (id == R.id.share) {
-            drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START);
-            }
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "Here is the share content body";
@@ -226,7 +222,8 @@ public class MainActivity extends AppCompatActivity
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
         } else if (id == R.id.about_us) {
-
+            Intent intent = new Intent(this, about.class);
+            startActivity(intent);
         } else if (id == R.id.log_out) {
 
         } else if (id == R.id.exit) {

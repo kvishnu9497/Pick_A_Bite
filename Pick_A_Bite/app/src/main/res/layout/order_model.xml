@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/element"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,13 +21,13 @@
                 android:id="@+id/itemname"
                 android:layout_width="146dp"
                 android:layout_height="wrap_content"
-                android:paddingStart="1dp"
-                android:paddingEnd="5dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="#4c4c4c"
-                android:text="Chicken Tandoor Grill with Extra Chilli"
-                android:textSize="14sp"/>
+                android:padding="5dp"
+                android:textColor="@color/light_black"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="5dp"
+                android:text="Chicken Tandoor Grill with Extra Chilli" />
         </LinearLayout>
 
         <View
@@ -36,9 +35,9 @@
             android:layout_width="1dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginEnd="9dp"
+            android:layout_marginEnd="10dp"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"/>
+            android:background="#7f7f7f"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -50,15 +49,18 @@
                 android:id="@+id/qty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Qty :"
+                android:text="Qty : "
                 android:gravity="center"
-                android:textSize="14sp"
+                android:textSize="15sp"
+                android:layout_marginBottom="4dp"
                 android:textColor="@android:color/black"/>
             <Spinner
-                android:id="@+id/counter12"
+                android:id="@+id/counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"/>
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:spinnerMode="dropdown"/>
 
         </LinearLayout>
 
@@ -67,9 +69,9 @@
             android:layout_width="1dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginStart="9dp"
+            android:layout_marginStart="10dp"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"/>
+            android:background="#7f7f7f"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -85,7 +87,7 @@
                 android:layout_centerInParent="true"
                 android:textColor="@color/dark_orange"
                 android:textStyle="bold"
-                android:textSize="16sp"/>
+                android:textSize="15sp"/>
         </RelativeLayout>
     </LinearLayout>
 
