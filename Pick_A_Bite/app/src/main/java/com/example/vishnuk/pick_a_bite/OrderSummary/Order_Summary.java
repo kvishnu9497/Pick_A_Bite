@@ -1,25 +1,23 @@
-package com.example.vishnuk.pick_a_bite;
+package com.example.vishnuk.pick_a_bite.OrderSummary;
 
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v7.widget.CardView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.vishnuk.pick_a_bite.BadgeCounters;
+import com.example.vishnuk.pick_a_bite.MainActivity;
+import com.example.vishnuk.pick_a_bite.R;
 
 import java.util.ArrayList;
 import java.util.List;

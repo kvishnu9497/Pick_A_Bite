@@ -13,7 +13,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,10 +21,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.example.vishnuk.pick_a_bite.OrderSummary.Order_Summary;
 
 import java.lang.reflect.Field;
 
@@ -135,7 +132,7 @@ public class MainActivity extends AppCompatActivity
             i++;
             if(i==1)
             {
-                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Press once again to exit", Snackbar.LENGTH_SHORT);
+                Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Tap back again to exit", Snackbar.LENGTH_SHORT);
                 snackbar.show();
             }
             else

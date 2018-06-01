@@ -19,6 +19,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.example.vishnuk.pick_a_bite.TabActivities.Arabic;
+import com.example.vishnuk.pick_a_bite.TabActivities.Chinese_delights;
+import com.example.vishnuk.pick_a_bite.TabActivities.Kababs;
+import com.example.vishnuk.pick_a_bite.TabActivities.Non_veg_appetizers;
+import com.example.vishnuk.pick_a_bite.TabActivities.Non_veg_gravy;
+import com.example.vishnuk.pick_a_bite.TabActivities.Rice;
+import com.example.vishnuk.pick_a_bite.TabActivities.Rice_n_noodles;
+import com.example.vishnuk.pick_a_bite.TabActivities.Salads;
+import com.example.vishnuk.pick_a_bite.TabActivities.Starters;
+import com.example.vishnuk.pick_a_bite.TabActivities.Veg_Gravy;
+
 
 public class TabbedActivity extends AppCompatActivity {
 

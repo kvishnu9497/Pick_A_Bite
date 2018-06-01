@@ -1,4 +1,4 @@
-package com.example.vishnuk.pick_a_bite;
+package com.example.vishnuk.pick_a_bite.ImageSlider;
 
 /**
  * Created by Vishnu K on 13-03-2018.

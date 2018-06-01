@@ -25,7 +25,7 @@
     </style>
 
     <style name="toolbar_theme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="colorControlNormal">@color/dark_orange</item>
+        <item name="colorControlNormal">@color/blue</item>
     </style>
 
     <style name="NavigationView"  parent="Theme.AppCompat.Light">

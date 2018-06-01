@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.vishnuk.pick_a_bite.ImageSlider.ImageModel;
+import com.example.vishnuk.pick_a_bite.ImageSlider.SlidingImage_Adapter;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import java.util.ArrayList;
@@ -25,9 +27,7 @@ public class HomeFragment extends Fragment {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
-    private int[] myImageList = new int[]{R.drawable.d, R.drawable.food,
-            R.drawable.c
-            ,R.drawable.cakes,R.drawable.b};
+    private int[] myImageList = new int[]{R.drawable.b, R.drawable.c, R.drawable.food, R.drawable.cakes,R.drawable.d};
     private CardView food, cake;
     public HomeFragment() {
         // Required empty public constructor

@@ -23,13 +23,13 @@
             android:screenOrientation="portrait" />
         <activity android:name=".cakes_activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Order_Summary"
+        <activity android:name=".OrderSummary.Order_Summary"
             android:screenOrientation="portrait" />
         <activity android:name=".TabbedActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".about"
             android:screenOrientation="portrait" />
-        <activity android:name=".OrderSummaryEdited"
+        <activity android:name=".OrderSummary.OrderSummaryEdited"
             android:screenOrientation="portrait" />
     </application>
 
