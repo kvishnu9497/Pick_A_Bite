@@ -1,7 +1,9 @@
 package com.example.vishnuk.pick_a_bite.OrderSummary;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +30,7 @@ public class Order_Summary extends AppCompatActivity{
     private List<OrderSummarySample> orderAdapterList = new ArrayList<>();
     OrderSummaryAdapter orderSummaryAdapter;
     Spinner counter;
+    private int count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

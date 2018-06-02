@@ -13,7 +13,7 @@
         app:popupTheme="@style/AppTheme.PopupOverlay"
         android:theme="@style/toolbar_theme"
         app:title="About Us"
-        app:titleTextColor="@color/blue"
+        app:titleTextColor="@color/dark_orange"
         />
     <View
         android:id="@+id/view_toolbar"
