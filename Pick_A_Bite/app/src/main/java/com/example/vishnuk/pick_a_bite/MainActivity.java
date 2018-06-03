@@ -240,23 +240,30 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.home) {
             loadFragment(new HomeFragment());
-        } else if (id == R.id.profile) {
+        }
+        else if (id == R.id.profile) {
 
-        } else if (id == R.id.contact_us) {
-
-        } else if (id == R.id.share) {
+        }
+        else if (id == R.id.contact_us) {
+            Intent intent = new Intent(this, contact_us.class);
+            startActivity(intent);
+        }
+        else if (id == R.id.share) {
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
             String shareBody = "Here is the share content body";
             sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
             sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
             startActivity(Intent.createChooser(sharingIntent, "Share via"));
-        } else if (id == R.id.about_us) {
+        }
+        else if (id == R.id.about_us) {
             Intent intent = new Intent(this, about.class);
             startActivity(intent);
-        } else if (id == R.id.log_out) {
+        }
+        else if (id == R.id.log_out) {
 
-        } else if (id == R.id.exit) {
+        }
+        else if (id == R.id.exit) {
             finish();
             System.exit(0);
         }

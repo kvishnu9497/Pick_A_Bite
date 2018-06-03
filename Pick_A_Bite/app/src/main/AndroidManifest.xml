@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vishnuk.pick_a_bite">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,18 +21,24 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cakes_activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".cakes_activity"
+        <activity
+            android:name=".OrderSummary.Order_Summary"
             android:screenOrientation="portrait" />
-        <activity android:name=".OrderSummary.Order_Summary"
+        <activity
+            android:name=".TabbedActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".TabbedActivity"
+        <activity
+            android:name=".about"
             android:screenOrientation="portrait" />
-        <activity android:name=".about"
+        <activity
+            android:name=".OrderSummary.OrderSummaryEdited"
             android:screenOrientation="portrait" />
-        <activity android:name=".OrderSummary.OrderSummaryEdited"
-            android:screenOrientation="portrait" />
+        <activity android:name=".contact_us"></activity>
     </application>
 
 </manifest>
