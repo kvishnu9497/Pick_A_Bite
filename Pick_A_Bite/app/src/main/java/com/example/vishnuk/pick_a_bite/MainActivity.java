@@ -1,9 +1,13 @@
 package com.example.vishnuk.pick_a_bite;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -11,6 +15,7 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.Gravity;
 import android.support.design.widget.NavigationView;
@@ -21,6 +26,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.vishnuk.pick_a_bite.OrderSummary.Order_Summary;
 
@@ -80,6 +88,7 @@ public class MainActivity extends AppCompatActivity
 
                     case R.id.more:
                         drawer.openDrawer(Gravity.START);
+                        fragment = new HomeFragment();
                         break;
                 }
 
@@ -159,8 +168,32 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.ic_shopping_cart) {
-            Intent intent = new Intent(this,Order_Summary.class);
-            startActivity(intent);
+            if (TabbedActivity.mNotificationCounter > 0 ) {
+                Intent intent = new Intent(this,Order_Summary.class);
+                startActivity(intent);
+            }
+            else if (TabbedActivity.mNotificationCounter == 0 ){
+                // Create custom dialog object
+                final Dialog dialog = new Dialog(this,R.style.custom_dialog);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                // Include dialog.xml file
+                dialog.setContentView(R.layout.dialog);
+                // Set dialog title
+                dialog.setTitle("Empty Cart");
+                // set values for custom dialog components - text, image and button
+                TextView text = (TextView) dialog.findViewById(R.id.text_dialog);
+                text.setText("Please add products to your cart.");
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.btn_dialog);
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+            }
         }
         if (id == android.R.id.home)
         {
@@ -206,7 +239,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-
+            loadFragment(new HomeFragment());
         } else if (id == R.id.profile) {
 
         } else if (id == R.id.contact_us) {
