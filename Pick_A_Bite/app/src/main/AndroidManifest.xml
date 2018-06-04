@@ -3,6 +3,7 @@
     package="com.example.vishnuk.pick_a_bite">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -38,7 +39,8 @@
         <activity
             android:name=".OrderSummary.OrderSummaryEdited"
             android:screenOrientation="portrait" />
-        <activity android:name=".contact_us"></activity>
+        <activity android:name=".contact_us" />
+        <activity android:name=".add_address"></activity>
     </application>
 
 </manifest>

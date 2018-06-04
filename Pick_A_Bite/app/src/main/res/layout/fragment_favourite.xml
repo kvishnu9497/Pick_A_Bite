@@ -33,6 +33,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/food_favourite"
             android:layout_centerHorizontal="true"
+            android:scaleX="-1"
             android:layout_centerVertical="true"
             android:layout_centerInParent="true" />
 

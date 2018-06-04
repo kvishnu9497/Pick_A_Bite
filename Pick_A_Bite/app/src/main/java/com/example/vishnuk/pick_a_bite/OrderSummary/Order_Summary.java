@@ -20,6 +20,7 @@ import android.widget.Spinner;
 import com.example.vishnuk.pick_a_bite.BadgeCounters;
 import com.example.vishnuk.pick_a_bite.MainActivity;
 import com.example.vishnuk.pick_a_bite.R;
+import com.example.vishnuk.pick_a_bite.add_address;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,5 +113,10 @@ public class Order_Summary extends AppCompatActivity{
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void perform_action(View view) {
+        Intent intent = new Intent(this,add_address.class);
+        startActivity(intent);
     }
 }
