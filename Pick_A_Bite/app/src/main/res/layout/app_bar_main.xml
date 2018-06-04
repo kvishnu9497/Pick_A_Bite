@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@android:color/white">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -23,8 +25,8 @@
         <View
             android:id="@+id/view_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="1.1dp"
-            android:background="@drawable/shadow"
+            android:layout_height="4dp"
+            android:background="@drawable/toolbar_elevation"
             android:layout_below="@id/toolbar"/>
 
     </android.support.design.widget.AppBarLayout>

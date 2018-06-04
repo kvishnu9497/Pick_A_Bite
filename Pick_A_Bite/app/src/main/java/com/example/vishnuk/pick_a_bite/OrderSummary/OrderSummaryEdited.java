@@ -135,7 +135,7 @@ public class OrderSummaryEdited extends AppCompatActivity {
             BadgeCounters.update(this,
                     menu.findItem(R.id.cart_badge_in_tabview),
                     R.drawable.ic_shopping_cart_36dp,
-                    BadgeCounters.BadgeColor.BLUE,
+                    BadgeCounters.BadgeColor.LIGHT_BLUE,
                     mNotificationCounter);
         } else {
             BadgeCounters.hide(menu.findItem(R.id.cart_badge_in_tabview));

@@ -13,7 +13,6 @@ import android.view.ViewGroup;
  */
 public class orderfragment extends Fragment {
 
-
     public orderfragment() {
         // Required empty public constructor
     }
