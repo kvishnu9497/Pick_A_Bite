@@ -8,9 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.vishnuk.pick_a_bite.OrderSummary.Order_Summary;
+
 import static com.example.vishnuk.pick_a_bite.TabbedActivity.mNotificationCounter;
 
 public class add_address extends AppCompatActivity {
+
+    private int counter=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,12 @@ public class add_address extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 return true;
+
+            case R.id.ic_shopping_cart:
+                Intent intent1 = new Intent(this,Order_Summary.class);
+                startActivity(intent1);
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -41,7 +51,7 @@ public class add_address extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_tabbed, menu);
+        getMenuInflater().inflate(R.menu.hometoolbar, menu);
         // Create a condition (hide it if the count < 0)
         if (mNotificationCounter >= 0) {
             BadgeCounters.update(this,
