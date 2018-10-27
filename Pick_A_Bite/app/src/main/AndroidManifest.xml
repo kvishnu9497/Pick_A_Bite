@@ -39,12 +39,12 @@
         <activity
             android:name=".OrderSummary.OrderSummaryEdited"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan"/>
-
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".contact_us" />
-
-        <activity android:name=".add_address"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".add_address"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".After_Order_Placed"></activity>
     </application>
 
 </manifest>
