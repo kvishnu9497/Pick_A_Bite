@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/light_grey"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/light_black"
+        android:text="Chicken Tandoor Grill with Extra Chilli"/>
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/light_black"
+        android:layout_marginStart="15dp"
+        android:text="3" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="63dp"
+        android:text="₹4000" />
+
+</LinearLayout>
